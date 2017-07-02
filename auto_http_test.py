@@ -35,7 +35,7 @@ def Suite():
 
 if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
-    HtmlFile = "/usr/local/apache-tomcat-7.0.78/webapps/apiReport" + now + "HTMLtemplate.html"
+    HtmlFile = "/usr/local/apache-tomcat-7.0.78/webapps/apiReport/" + now + "HTMLtemplate.html"
     print HtmlFile
     fp = file(HtmlFile, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"云杉接口测试报告", description=u"用例测试执行情况")
