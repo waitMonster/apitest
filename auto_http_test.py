@@ -24,7 +24,7 @@ class TestApi(unittest.TestCase):
             self.assertEqual(result['status'], u'201')
             self.assertEqual(result['message'], u'快递公司参数异常：单号不存在或者已经过期')
 
-#test
+#test12
 
 def Suite():
     testunit = unittest.TestSuite()
