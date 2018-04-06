@@ -16,7 +16,7 @@ class TestApi(unittest.TestCase):
     def test_QueryExpress(self):
         '''查询快递单'''
         url = "http://www.kuaidi100.com/query"
-        data = {'type': 'ems', 'postid': '121212'}
+        data = {'type': 'jd', 'postid': '121212'}
         result = self.api.http_request("GET", url, data, False)
         if result == None:
             self.assertTrue(False)
@@ -35,7 +35,8 @@ def Suite():
 if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
     HtmlFile = "/usr/local/test/" + now + "HTMLtemplate.html"
+   # HtmlFile= "d:/test/12.html"
     print HtmlFile
     fp = file(HtmlFile, "wb")
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"云杉接口测试报告", description=u"用例测试执行情况")
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"测试提交", description=u"用例测试执行情况")
     runner.run(Suite())
