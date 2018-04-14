@@ -30,12 +30,12 @@ def Suite():
     testunit.addTest(TestApi("test_QueryExpress"))
     return testunit
 
-#12
 
 if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
     HtmlFile = "/usr/local/test/" + now + "HTMLtemplate.html"
-   # HtmlFile= "d:/test/12.html"
+    HtmlFile= "D:/pythoncharm/apitest/" + now + "HTMLtemplate.html"
+    print HtmlFile
     print HtmlFile
     fp = file(HtmlFile, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"测试提交", description=u"用例测试执行情况")
