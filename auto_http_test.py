@@ -37,6 +37,7 @@ if __name__ == '__main__':
     HtmlFile= "D:/pythoncharm/apitest/" + now + "HTMLtemplate.html"
     print HtmlFile
     print HtmlFile
+    print HtmlFile
     fp = file(HtmlFile, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"测试提交", description=u"用例测试执行情况")
     runner.run(Suite())
