@@ -34,10 +34,8 @@ def Suite():
 if __name__ == '__main__':
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
     HtmlFile = "/usr/local/test/" + now + "HTMLtemplate.html"
-    HtmlFile= "D:/pythoncharm/apitest/" + now + "HTMLtemplate.html"
-    print HtmlFile
-    print HtmlFile
-    print HtmlFile
+    #HtmlFile= "D:/pythoncharm/apitest/" + now + "HTMLtemplate.html"
+
     fp = file(HtmlFile, "wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"测试提交", description=u"用例测试执行情况")
     runner.run(Suite())
